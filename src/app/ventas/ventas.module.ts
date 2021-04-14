@@ -5,6 +5,7 @@ import { NoComunesComponent } from './pages/no-comunes/no-comunes.component';
 import { BasicosComponent } from './pages/basicos/basicos.component';
 import { OrdenarComponent } from './pages/ordenar/ordenar.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+// import { PrimeNGConfig } from 'primeng/api';
 
 
 
@@ -22,6 +23,7 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
     NoComunesComponent,
     BasicosComponent,
     OrdenarComponent
-  ]
+  ],
+  // providers:[PrimeNGConfig]
 })
 export class VentasModule { }
