@@ -1,7 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import {ButtonModule} from 'primeng/button';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
+import { AppRouterModule } from './app-router.module';
+import { VentasModule } from './ventas/ventas.module';
+
+//Cambiar el local de la app
+import localeES from '@angular/common/locales/es-MX';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localeES);
 
 @NgModule({
   declarations: [
@@ -9,9 +17,13 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    ButtonModule
+    SharedModule,
+    AppRouterModule,
+    VentasModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'es-MX'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
