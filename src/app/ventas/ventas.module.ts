@@ -6,6 +6,10 @@ import { BasicosComponent } from './pages/basicos/basicos.component';
 import { OrdenarComponent } from './pages/ordenar/ordenar.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 // import { PrimeNGConfig } from 'primeng/api';
+import { MayusculasPipe } from './pipes/mayusculas.pipe';
+import { CanFlyPipe } from './pipes/canFly.pipe';
+import { OrdenarPipe } from './pipes/ordenar.pipe';
+
 
 
 
@@ -13,7 +17,12 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
   declarations: [NumerosComponent,
                 NoComunesComponent,
                 BasicosComponent,
-                OrdenarComponent],
+                OrdenarComponent,
+                MayusculasPipe,
+                CanFlyPipe,
+                OrdenarPipe
+
+              ],
   imports: [
     CommonModule,
     PrimeNgModule

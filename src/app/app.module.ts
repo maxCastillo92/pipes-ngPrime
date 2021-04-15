@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Cambiar el local de la app
 import localeES from '@angular/common/locales/es-MX';
 import { registerLocaleData } from '@angular/common';
-import { PrimeNGConfig } from 'primeng/api';
+import { FilterService, PrimeNGConfig } from 'primeng/api';
 
 registerLocaleData(localeES);
 
@@ -24,7 +24,7 @@ registerLocaleData(localeES);
     VentasModule
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'es-MX'},PrimeNGConfig
+    { provide: LOCALE_ID, useValue: 'es-MX'},PrimeNGConfig,FilterService
   ],
   bootstrap: [AppComponent]
 })
